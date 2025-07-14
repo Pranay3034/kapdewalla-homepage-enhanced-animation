@@ -1,0 +1,249 @@
+/* UPDATED style.css for All White Theme + Dark Mode */
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #000;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+.navbar-nav .nav-link {
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffc107 !important;
+}
+
+.input-group input:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.carousel-container {
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-slide {
+  display: inline-block;
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+.campaign-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.campaign-box img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .carousel-slide {
+    width: calc(100% / 2);
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel-slide {
+    width: calc(100% / 3);
+  }
+}
+
+/* Card and Background */
+.bg-gray,
+.bg-gray-2,
+.card,
+.accordion-button,
+.accordion-body,
+footer,
+.navbar,
+.about-section,
+.hero-section {
+  background-color: #ffffff !important;
+  color: #000 !important;
+}
+
+/* Theme: Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .card,
+body.dark-mode .accordion-button,
+body.dark-mode .accordion-body,
+body.dark-mode footer,
+body.dark-mode .navbar,
+body.dark-mode .bg-white,
+body.dark-mode .btn-outline-dark,
+body.dark-mode .about-section,
+body.dark-mode .hero-section {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+body.dark-mode .text-dark {
+  color: #ffffff !important;
+}
+
+body.dark-mode .btn-outline-dark:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #ffc107;
+  color: #000;
+  border: none;
+  padding: 12px 14px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+  display: none;
+}
+
+#backToTop:hover {
+  background-color: #ff9800;
+  transform: scale(1.1);
+  color: #fff;
+}
+
+/* Dark mode */
+body.dark-mode #backToTop {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode #backToTop:hover {
+  background-color: #555;
+}
+
+
+/* Hero Section - Dark Mode */
+body.dark-mode .campaign-box img {
+  filter: brightness(0.7);
+}
+
+body.dark-mode .gradient-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+}
+
+/* About Section - Dark Mode */
+body.dark-mode .about-section p {
+  color: #cccccc;
+}
+
+/* Hover & Animation Enhancements */
+.card {
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.btn {
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.navbar .nav-link {
+  position: relative;
+}
+
+.navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+  background-color: #ffc107;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* Scroll-triggered Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.floating-icon {
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+.bouncing-arrow {
+  animation: bounce 1.5s infinite;
+}
+
+@keyframes scaleIn {
+  0% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animated-modal {
+  animation: scaleIn 0.3s ease-out;
+}
