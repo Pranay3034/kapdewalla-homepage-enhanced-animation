@@ -247,3 +247,15 @@ body.dark-mode .about-section p {
 .animated-modal {
   animation: scaleIn 0.3s ease-out;
 }
+
+/* Dark mode: Product cards */
+body.dark-mode .card .text-muted,
+body.dark-mode .card small,
+body.dark-mode .card strong {
+  color: #ddd !important;  /* Light gray text for readability */
+}
+
+/* Optional: Make discount info brighter */
+body.dark-mode .card .text-success {
+  color: #7CFC00 !important;  /* Or any brighter green */
+}
